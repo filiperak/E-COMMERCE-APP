@@ -27,6 +27,9 @@ const ProductSingleView = () => {
             setLoading(false);
           });
     },[])
+    const backBtn = () => {
+        navigate(-1)
+    }
     return (
         <>
           {loading ? (
@@ -38,6 +41,7 @@ const ProductSingleView = () => {
                 <img src={product.image} alt={product.title} />
                 <p>{product.title}</p>
                 <p>{product.description}</p>
+                <button className="back-btn" onClick={backBtn}>Go Back</button>
             </div>
           )}
         </>
