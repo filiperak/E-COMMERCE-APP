@@ -1,0 +1,16 @@
+.navbar{
+    background-color: rgb(224, 217, 217);
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo{
+    max-width: 20%;
+    max-height: 30px;
+}
+.nav-cart{ 
+    max-width: 7%;
+    max-height: 40px;
+
+}
