@@ -5,7 +5,7 @@ export const ProductContext = createContext();
 const ProductContextProvider = ({ children }) => {
     const [productState,productDispatch] = useReducer(productReducer,initialState);
     return(
-        <ProductContext.Provider>
+        <ProductContext.Provider value={{ productState, productDispatch }}>
             {children}
         </ProductContext.Provider>
     )
