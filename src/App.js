@@ -5,6 +5,7 @@ import Home from './components/views/Home';
 import Cart from './components/views/Cart';
 import Products from './components/views/Products';
 import ProductContextProvider from './contexts/ProductContext';
+import ProductSingleView from './components/views/ProductSingleView';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/' element={<Home/>}/>
           <Route path='/products' element={<Products/>}/>
+          <Route path='/products/:productId' element={<ProductSingleView/>}/>
         </Routes>
         </ProductContextProvider>
       </Router>

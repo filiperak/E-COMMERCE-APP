@@ -1,0 +1,10 @@
+.product-list{
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+
+}
+.product-list .product-list-item{
+    background-color: brown;
+}
