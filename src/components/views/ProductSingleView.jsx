@@ -13,7 +13,6 @@ const ProductSingleView = () => {
     const navigate = useNavigate();
     const {productId} = useParams();
 
-    console.log(productId);
     useEffect(() => {
         instance.get(`/products/${productId}`)
         .then((res) => {
