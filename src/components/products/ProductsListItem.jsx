@@ -7,7 +7,7 @@ const ProductListItem = ({product}) => {
         <div className="product-list-item">
             <img src={product.image} alt={product.title} />
             <p>{product.title}</p>
-            <p>{product.description}</p>
+            {/* <p>{product.description}</p> */}
         </div>
         </Link>
     );

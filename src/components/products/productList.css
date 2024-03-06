@@ -1,10 +1,15 @@
 .product-list{
     display: flex;
-    justify-content: space-between;
-    overflow-y: scroll;
+    justify-content: space-around;
+    max-width: 95vw;
     flex-wrap: wrap;
-
 }
 .product-list .product-list-item{
     border: 1px solid red;
+}
+.product-list a{
+    flex: 0 1 calc(25% - 20px); 
+    margin: 10px; 
+    box-sizing: border-box;
+    min-width: 330px;
 }

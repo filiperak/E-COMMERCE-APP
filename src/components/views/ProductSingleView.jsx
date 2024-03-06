@@ -3,6 +3,7 @@ import { useParams, useNavigate, Navigate } from "react-router-dom";
 import instance from "../../services/api";
 import Loading from "../laoding/Loading";
 import Error from "../error/Error";
+import './productSingleView.css'
 
 
 const ProductSingleView = () => {
@@ -37,11 +38,12 @@ const ProductSingleView = () => {
           ) : error ? (
             <Error error={error} />
           ) : (
-            <div>
+            <div className="product-view">
                 <img src={product.image} alt={product.title} />
                 <p>{product.title}</p>
                 <p>{product.description}</p>
                 <button className="back-btn" onClick={backBtn}>Go Back</button>
+                <button>add to cart</button>
             </div>
           )}
         </>
