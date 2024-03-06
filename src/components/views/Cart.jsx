@@ -1,14 +1,14 @@
 import { useContext,useEffect,useState } from "react";
 import { CartContext } from "../../contexts/CartContext";
-
+import './cartStyle.css'
 
 const Cart = () => {
     const {cartState, cartDispatch} = useContext(CartContext);
     return (
-        <div>
+        <div className="cart-container">
             this is cart
             {cartState.map(item => (
-                <div key={item.id}>
+                <div key={item.id} className="card-item">
                     <p>{item.title}</p>
                     <img src={item.image} alt={item.title} />
                     <p>{item.price}</p>
