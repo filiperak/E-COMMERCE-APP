@@ -6,11 +6,13 @@ import Cart from './components/views/Cart';
 import Products from './components/views/Products';
 import ProductContextProvider from './contexts/ProductContext';
 import ProductSingleView from './components/views/ProductSingleView';
+import CartContextProvider from './contexts/CartContext';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <CartContextProvider>
         <ProductContextProvider>
         <Navbar/>
         <Routes>
@@ -20,6 +22,7 @@ function App() {
           <Route path='/products/:productId' element={<ProductSingleView/>}/>
         </Routes>
         </ProductContextProvider>
+        </CartContextProvider>
       </Router>
     </div>
   );

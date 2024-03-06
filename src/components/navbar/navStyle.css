@@ -9,8 +9,29 @@
     max-width: 20%;
     max-height: 30px;
 }
-.nav-cart{ 
+.cart{ 
+    max-width: 95%;
+    max-height: 40px;
+    display: inline-block;
+}
+.nav-cart{
+    border:1px solid red;
     max-width: 7%;
     max-height: 40px;
+    position: relative;
+    
+}
+.cart-count{
+    background-color: rgb(64, 64, 64);
+    border-radius: 50%;
+    height: 20px;
+    aspect-ratio: 1 / 1;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
