@@ -10,7 +10,8 @@ body{
     height: 70%;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
     overflow: scroll;
     width: 90%;
 }

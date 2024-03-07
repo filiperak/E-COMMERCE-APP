@@ -7,7 +7,8 @@ const Footer = () => {
     return (
         <footer className="footer">
             <p>"© 2024 Amazon.rs</p>
-            <div onClick={() => navigate('/privacypolicy')}>test</div>
+            <div onClick={() => navigate('/privacypolicy')}>Privacy Policy</div>
+            <div onClick={() => navigate('/termsofservice')}>Terms of Service</div>
         </footer>
     );
 }

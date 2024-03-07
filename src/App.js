@@ -9,6 +9,7 @@ import ProductContextProvider from './contexts/ProductContext';
 import ProductSingleView from './components/views/ProductSingleView';
 import CartContextProvider from './contexts/CartContext';
 import PrivacyPolicy from './components/views/PrivacyPolicy';
+import TermsOfService from './components/views/TermsOfService';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='/products' element={<Products/>}/>
           <Route path='/products/:productId' element={<ProductSingleView/>}/>
           <Route path='/privacypolicy' element={<PrivacyPolicy/>}/>
+          <Route path='/termsofservice' element={<TermsOfService/>}/>
           
         </Routes>
         </ProductContextProvider>
