@@ -1,9 +1,13 @@
 .navbar{
-    background-color: rgb(224, 217, 217);
+    background-color: rgb(49, 115, 181);
     height: 8vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    right: 0%;
 }
 .nav-logo{
     max-width: 20%;
@@ -15,23 +19,24 @@
     display: inline-block;
 }
 .nav-cart{
-    border:1px solid red;
-    max-width: 7%;
+    width: 40px;
     max-height: 40px;
     position: relative;
     
 }
 .cart-count{
-    background-color: rgb(64, 64, 64);
+    background-color: rgb(94, 94, 94);
     border-radius: 50%;
     height: 20px;
     aspect-ratio: 1 / 1;
     font-size: 15px;
-    color: #fff;
+    color: RGB(255, 165, 0);
     font-weight: 700;
     position: absolute;
+    left: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
+
 
 }

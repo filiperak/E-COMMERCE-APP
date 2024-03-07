@@ -1,3 +1,6 @@
+body{
+    margin-top: 8vh;
+}
 .product-list{
     display: flex;
     justify-content: space-around;
