@@ -1,10 +1,7 @@
-/* body{
-    margin-top: 15vh;
+body{
     margin-bottom: 6vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
+
+}
 .product-view{
     padding: 5%;
     margin-top: 15vh;

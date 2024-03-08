@@ -5,6 +5,13 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
     const {cartState, cartDispatch} = useContext(CartContext);
+    const [checkout,setCheckOut] = useState(false)
+    const [total,setTotal] = useState(0);
+
+    useEffect(()=> {
+        const totalPrice = cartState.reduce((acc, item) => acc + item.price, 0);
+        setTotal(totalPrice);
+    },[cartState])
     return (
         <div className="cart-container">
             <h3>Your Cart</h3>
@@ -20,6 +27,18 @@ const Cart = () => {
                 </div>
             ))}
             </div>
+            <p>{`Total Price: $ ${total.toFixed(2)}`}</p>
+            <button onClick={() => cartDispatch({type:'EMPTY_CART'})}>Empty Cart</button>
+            <button onClick={() => { setCheckOut(!checkout) }}>Checkout</button>
+            {/* <button onClick={() => cartDispatch({type:'EMPTY_CART'})}>Checkout</button> */}
+            {checkout? (
+            <div className="confirmation-msg">
+                <p>Purchase completed.</p>
+                <p>{`Total Price: $ ${total.toFixed(2)}`}</p>
+                <button onClick={() => { setCheckOut(!checkout); cartDispatch({ type: 'EMPTY_CART' }); }}>ok</button>
+            </div>
+                ):(null)}
+            
             <Link to={`/products`}>
                 <span>Continue Shopping</span>
             </Link>
