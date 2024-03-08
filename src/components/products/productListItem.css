@@ -2,5 +2,9 @@ body{
     margin-top: 8vh;
 }
 .product-list-item img{
-    max-width: 10%;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+.product-list-item{
+    color: black;
 }

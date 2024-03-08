@@ -6,4 +6,18 @@
     right: 0%;
     height: 6vh;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(181, 193, 203);
+}
+.footer p:first-child{
+    margin: 0 3%;
+}
+.footer .links-footer{
+    display: flex;
+    margin: 0 3%;
+}
+.footer .links-footer div{
+    margin:  7px;
+    cursor: pointer;
 }

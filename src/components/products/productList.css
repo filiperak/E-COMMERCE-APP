@@ -1,18 +1,23 @@
-body{
+body {
     margin-top: 8vh;
-}
-.product-list{
     display: flex;
-    justify-content: space-around;
-    max-width: 95vw;
+    justify-content: center;
+  }
+  
+  .product-list {
+    max-width: 1000px;
+    display: flex;
     flex-wrap: wrap;
-}
-.product-list .product-list-item{
+    justify-content: space-between;
+  }
+  
+  .product-list a {
     border: 1px solid red;
-}
-.product-list a{
-    flex: 0 1 calc(25% - 20px); 
-    margin: 10px; 
+    margin: 10px ;
     box-sizing: border-box;
-    min-width: 330px;
-}
+    width: calc(33.33% - 20px); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    border:1px solid rgba(255, 255, 255, 0.693);
+  }
+  

@@ -1,9 +1,10 @@
-body{
-    margin-top: 8vh;
-}
+
 .cart-container{
     height: 80vh;
-
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .cart-table{
     justify-content: center;
@@ -13,12 +14,12 @@ body{
     flex-direction: column;
     /* flex-wrap: wrap; */
     overflow: scroll;
-    width: 90%;
+    width: 80%;
 }
 .cart-item{
     display: flex;
     height: 18%;
-    width:80%;
+    width:70%;
     padding: 1%;
     margin: 3px;
     /* background-color: rgb(238, 235, 235); */

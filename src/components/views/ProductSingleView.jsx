@@ -57,13 +57,25 @@ const ProductSingleView = () => {
             ) : error ? (
                 <Error error={error} />
             ) : (
+                <>
                 <div className="product-view">
                     <img src={product.image} alt={product.title} />
-                    <p>{product.title}</p>
-                    <p>{product.description}</p>
-                    <button className="back-btn" onClick={backBtn}>Go Back</button>
-                    <button onClick={handleAddBtn}>Add to Cart</button>
+                    <div className="info-container">
+                        <div className="product-info">
+                            <h3>{product.title}</h3>
+                            <p>Price: ${product.price}</p>
+
+                        </div>
+                        <p>{product.description}</p>
+                        <div className="product-ratitng">{`Rating:${product.rating.rate}/5 based on ${product.rating.count} reviews`}</div> 
+                        <div className="add-btn-div">              
+                        <button onClick={handleAddBtn} className="add-to-cart-btn">Add to Cart</button>
+                        </div> 
+        
+                    </div>
                 </div>
+                <button className="product-back-btn" onClick={backBtn}>Back to Products</button>
+                </>
             )}
         </>
     );

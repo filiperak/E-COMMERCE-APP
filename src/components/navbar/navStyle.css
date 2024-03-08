@@ -8,10 +8,12 @@
     top: 0;
     left: 0%;
     right: 0%;
+    padding-right: 10px;
 }
 .nav-logo{
     max-width: 20%;
     max-height: 30px;
+    cursor: pointer;
 }
 .cart{ 
     max-width: 95%;
@@ -22,7 +24,8 @@
     width: 40px;
     max-height: 40px;
     position: relative;
-    
+    cursor: pointer;
+
 }
 .cart-count{
     background-color: rgb(94, 94, 94);

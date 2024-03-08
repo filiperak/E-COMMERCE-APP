@@ -75,7 +75,7 @@ const Products = () => {
     const handleCategoryChange = (selectedCategory) => {
         setSelectedCategory(selectedCategory);
     };
-    
+    console.log(products);
 
     if (loading) return <Loading />;
     if (error) return <Error error={error} />;
