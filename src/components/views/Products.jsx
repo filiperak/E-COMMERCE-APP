@@ -6,11 +6,13 @@ import ProductsList from "../products/ProductsList";
 import Loading from '../laoding/Loading';
 import Error from '../error/Error';
 import SelectCategory from "../selectCategory/SelectCategory";
+import Sort from "../selectCategory/Sort";
 
 const Products = () => {
     const { productState, productDispatch } = useContext(ProductContext);
     const { products, loading, error } = productState;
-    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedCategory, setSelectedCategory] = useState();
+    const [selectedSort, setSelectedSort] = useState('any');
 
     useEffect(() => {
         productDispatch({ type: "FETCH_PRODUCTS_REQUEST" });
@@ -35,6 +37,10 @@ const Products = () => {
         setSelectedCategory(selectedCategory);
     };
     console.log(products);
+    console.log(selectedCategory);
+    const handleSortChange = (selectedSort) => {
+        setSelectedSort(selectedSort)
+    }
 
     if (loading) return <Loading />;
     if (error) return <Error error={error} />;
@@ -43,7 +49,8 @@ const Products = () => {
         <>
             <div>Product View</div>
             <SelectCategory onCategoryChange={handleCategoryChange} />
-            <ProductsList products={products} selectedCategory={selectedCategory} />
+            <Sort onSortChange={handleSortChange}/>
+            <ProductsList products={products} selectedCategory={selectedCategory} selectedSort={selectedSort}/>
         </>
     );
 }
