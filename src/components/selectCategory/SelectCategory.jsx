@@ -1,7 +1,6 @@
 
 import { useEffect, useState } from "react";
 import instance from "../../services/api";
-
 const SelectCategory = ({ onCategoryChange }) => {
     const [categories, setCategories] = useState([]);
 
@@ -19,7 +18,8 @@ const SelectCategory = ({ onCategoryChange }) => {
     };
 
     return (
-        <div>
+        <div className='select-sort'>
+            <p>Select Category:</p>
             <select name="select-category" onChange={(e) => handleCategoryChange(e.target.value)}>
                 <option value="all">All Products</option>
                 {categories.map((elem) => (
@@ -29,5 +29,4 @@ const SelectCategory = ({ onCategoryChange }) => {
         </div>
     );
 };
-
 export default SelectCategory;

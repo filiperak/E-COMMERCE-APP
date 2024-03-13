@@ -1,10 +1,10 @@
-body {
+/* body {
     margin-top: 8vh;
     display: flex;
     justify-content: center;
-  }
+  } */
   
-  .product-list {
+  /* .product-list {
     max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
@@ -19,4 +19,4 @@ body {
     border-radius: 4px;
     border:1px solid rgba(255, 255, 255, 0.693);
   }
-  
+   */

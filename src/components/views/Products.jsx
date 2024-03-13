@@ -7,6 +7,7 @@ import Loading from '../laoding/Loading';
 import Error from '../error/Error';
 import SelectCategory from "../selectCategory/SelectCategory";
 import Sort from "../selectCategory/Sort";
+import './viewStyles/productsStyle.css'
 
 const Products = () => {
     const { productState, productDispatch } = useContext(ProductContext);
@@ -46,12 +47,17 @@ const Products = () => {
     if (error) return <Error error={error} />;
 
     return (
-        <>
-            <div>Product View</div>
-            <SelectCategory onCategoryChange={handleCategoryChange} />
-            <Sort onSortChange={handleSortChange}/>
-            <ProductsList products={products} selectedCategory={selectedCategory} selectedSort={selectedSort}/>
-        </>
+        <div className="products-container">
+            <div className="select-sort-div">
+                <SelectCategory onCategoryChange={handleCategoryChange} />
+                <Sort onSortChange={handleSortChange}/>
+            </div>
+
+            <ProductsList products={products}
+             selectedCategory={selectedCategory}
+             selectedSort={selectedSort} 
+             className='products-list'/>
+        </div>
     );
 }
 

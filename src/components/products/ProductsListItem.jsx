@@ -8,6 +8,7 @@ const ProductListItem = ({product}) => {
             <img src={product.image} alt={product.title} />
             <p>{product.title}</p>
             {/* <p>{product.description}</p> */}
+            <p className="p-item-price">{`Price: $${product.price}`}</p>
         </div>
         </Link>
     );
