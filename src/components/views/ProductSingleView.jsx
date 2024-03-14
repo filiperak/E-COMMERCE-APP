@@ -22,7 +22,8 @@ const ProductSingleView = () => {
                 id: product.id,
                 title: product.title,
                 price: product.price,
-                image: product.image
+                image: product.image,
+                category:product.category
             },
         });
         console.log('Adding to cart:', product);
@@ -58,6 +59,7 @@ const ProductSingleView = () => {
                 <Error error={error} />
             ) : (
                 <div className="product-view">
+                    
                     <div>
                     <div className="product-view-container">
                         <div className="product-img-container">
@@ -65,13 +67,17 @@ const ProductSingleView = () => {
                         </div>
                         <div className="info-container">
                             <h3>{product.title}</h3>
-                            <p>Price: ${product.price}</p>
-                            <p>{product.description}</p>
                             <div className="product-ratitng">{`Rating:${product.rating.rate}/5 ⭐ based on ${product.rating.count} reviews`}</div> 
-                            <button onClick={handleAddBtn} className="add-to-cart-btn">Add to Cart</button>
+                            <hr />
+                            <p className="item-product-description">{product.description}</p>
+                            <p>Price: ${product.price}</p>
+                            <div className="add-to-cart-div">
+                                <button onClick={handleAddBtn} className="add-to-cart-btn">Add to Cart</button>
+                            </div>
                         </div>
                     </div>
                     <button className="product-back-btn" onClick={backBtn}>Back to Products</button>
+
                     </div>
                 </div>
             )}

@@ -10,9 +10,13 @@ body{
   margin: 8vh 0;
 
 }
-
+a{
+  text-decoration: none;
+  color: rgb(37, 37, 182);
+  font-weight: 600;
+}
 ::-webkit-scrollbar {
-  width: 8px; 
+  width: 6px; 
 }
 
 ::-webkit-scrollbar-thumb {

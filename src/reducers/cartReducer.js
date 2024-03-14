@@ -7,7 +7,8 @@ export const cartReducer = (state,action) => {
                     title: action.product.title,
                     id: action.product.id,
                     price: action.product.price,
-                    image: action.product.image
+                    image: action.product.image,
+                    category: action.product.category
                 }
             ];
         case 'REMOVE_FROM_CART':

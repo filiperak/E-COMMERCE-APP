@@ -1,73 +1,163 @@
-
-.cart-container{
+.cart-container {
     height: 80vh;
-    width: 100vw;
+    width: 90vw;
     display: flex;
     align-items: center;
     flex-direction: column;
+    box-sizing: border-box;
 }
-.cart-table{
-    justify-content: center;
-    height: 70%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    /* flex-wrap: wrap; */
-    overflow: scroll;
-    width: 80%;
-}
-.cart-item{
-    display: flex;
-    height: 18%;
-    width:70%;
-    padding: 1%;
-    margin: 3px;
-    /* background-color: rgb(238, 235, 235); */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    border:1px solid rgba(255, 255, 255, 0.693);
-    position: relative;
-}
-.cart-item img{
+
+.cart-item img {
     width: 10vh;
     aspect-ratio: 1/1;
+}
+.cart-header{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 75%;
+    align-items: center;
+    padding:0 6px;
+}
+.cart-header h3{
+    font-size: 2rem;
+}
+.cart-header span, .cart-header div button{
+    border: 2px solid rgb(49, 115, 181);
+    color: rgb(49, 115, 181);
+    border-radius: 30px;
+    padding: 4px;
+    cursor: pointer;
+    font-weight: 650;
+}
+.cart-header div button:hover{
+    background-color: rgb(211, 218, 224);
+}
+
+
+
+.cart-products {
+    display: flex;
+    max-width: 1000px;
+    width: 75%;
+    flex-direction: row;
+    max-height: 75%;
+}
+
+.cart-product-list {
+    flex: 0 0 65%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    
+}
+
+.cart-item {
+    display: flex;
+    padding: 0 3%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.693);
+    width: 90%;
+    justify-content: space-between;
+    margin: 6px;
+}
+
+.first-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 2%;
+    flex: 0 0 25%;
+}
+
+.second-item-container {
+    text-align: left;
+}
+
+.second-item-container p:first-of-type {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.second-item-container p:last-of-type {
+    border-radius: 6px;
+    background-color: rgb(93, 95, 96);
+    font-size: 0.6rem;
+    padding: 4px;
+    max-width: 35%;
+    text-align: center;
+}
+
+.third-item-container {
+    text-align: right;
+    padding-left: 2%;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    text-align: center;
+    align-items:end;
 
 }
-.item-price{
-    position: absolute;
-    right: 2%;
-    font-size: 0.8em;
-    top: 0;
-    margin: 1px;
-}
-.delete-btn{
-    background-color: rgb(221, 71, 71);
-    color: #fff;
-    height: 20%;
+
+.third-item-container p:first-of-type {
+    border: 2px solid green;
+    color: green;
     border-radius: 4px;
-    padding: 4px;
-    line-height: 14px;
-    position: absolute;
-    right: 2%;
-    bottom: 4%;
-    margin: 1px;
-    font-weight: 700;
+    font-weight: 600;
+    width: 100px;
+}
+
+.third-item-container p:last-of-type {
+    padding-bottom: 0;
+    border-radius: 4px;
+    border: 2px solid rgb(168, 160, 160);
+    color: rgb(168, 160, 160);
     cursor: pointer;
+    width: 100px;
+
 }
-.item-title{
-    font-size: 1em;
-    padding-left: 1%;
-}
-a{
-    text-decoration: none;
-    color: rgb(37, 37, 182);
+
+.cart-adress-form {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 35%;
+    padding: 6px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.693);
+    justify-self: center;
+    font-size: 0.8rem;
     font-weight: 600;
 }
-.confirmation-msg{
-    position: absolute;
-    bottom: 50%;
-    width: 250px;
-    aspect-ratio: 1/1;
-    background-color: rgb(51, 51, 186);
+
+.cart-adress-form input,
+.cart-adress-form label {
+    display: block;
+}
+.cart-adress-form input{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.693);
+}
+.order-sum {
+    display: flex;
+    justify-content: space-between;
+}
+.cart-order-btn{
+    background-color: rgb(255, 166, 0);
+    border-radius: 4px;
+    padding: 2%;
+    text-align: center;
     color: #fff;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.cart-order-btn:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 213, 134);
 }
