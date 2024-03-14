@@ -56,6 +56,9 @@
         width: 100%;
         padding: 10px;
     }
+    .add-to-cart-div{
+        padding: 0 5%;
+    }
 }
 
 .product-back-btn{

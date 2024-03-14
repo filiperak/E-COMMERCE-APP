@@ -107,14 +107,12 @@ const Cart = () => {
                             <label htmlFor=''>Postal code:</label>
                             <input type="text" name="" id="" />
                             <div className="cart-order-btn">Order</div>
-
                         </form>
                     </div>
                 ):(
                     <div className="cart-products">
                         <div className="product-list">
-                            <p>Your cart is empty!</p>
-                            <p>Ready to start Shopping?</p>
+                            <p>You'r cart is empty!</p>
                         </div>
                         <form className="cart-adress-form">
                             <div className="order-sum">

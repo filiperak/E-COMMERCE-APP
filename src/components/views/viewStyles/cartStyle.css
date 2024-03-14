@@ -161,3 +161,25 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: rgb(255, 213, 134);
 }
+@media only screen and (max-width: 768px) {
+    .cart-products{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .cart-product-list{
+        flex: 0 0 100%;
+    }
+    .cart-adress-form{
+        flex: 0 0 100%;
+        margin: 0 2%;
+    }
+    .cart-container{
+        width: 100vw;
+    }
+    .cart-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
