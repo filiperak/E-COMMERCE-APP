@@ -1,16 +1,34 @@
 
-.randproduct-list{
-    max-width: 1000px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.home-page-container{
+ width: 100vw;
+ height: 100vh;
+ margin: 0 7vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
 
 }
-.randproduct-list a{
-    margin: 10px ;
-    box-sizing: border-box;
-    width: calc(50% - 20px); 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    border:1px solid rgba(255, 255, 255, 0.693);
+.home-wrapper{
+    max-width: 1000px;
+}
+
+.rand-product-container {
+    display: flex;
+    overflow-x: auto; /* Set overflow to horizontal */
+    overflow-y: hidden; /* Hide vertical overflow */
+    justify-content: flex-start; 
+    width: 100%;
+    margin-top: 10px;
+    white-space: nowrap; /* Prevent items from wrapping */
+}
+
+.rand-product-container .product-list-item {
+    flex: 0 0 calc(33.33% - 10px); 
+    margin-right: 10px; 
+    background-color: aquamarine;
+    flex-shrink: 0; 
+    overflow: hidden;
+}
+.rand-product-container .product-list-item img{
+    width:10px;
 }

@@ -16,7 +16,9 @@ const Home = () => {
     instance
       .get('/products')
       .then((res) => {
-        setRandProduct(res.data.slice(4, 8));
+        const shuffledProducts = res.data.sort(() => Math.random() - 0.5);
+        const selectedProducts = shuffledProducts.slice(0, 6);
+        setRandProduct(selectedProducts)
         setLoading(false);
         console.log(res.data);
       })
@@ -36,17 +38,19 @@ const Home = () => {
   }
 
   return (
-    <>
-      <p>This is home</p>
-      <Link to="/products">
-        <button>All products</button>
-      </Link>
-      <div className="randproduct-list">
-        {randproduct.map((product) => (
-          <ProductListItem key={product.id} product={product} className='product-list-item' />
-        ))}
+    <div className="home-page-container">
+      <div className="home-wrapper">
+        <Link to="/products">
+          <button>All products</button>
+        </Link>
+          <p>This week's special offer</p>
+          <div className="rand-product-container">
+            {randproduct.map((product) => (
+              <ProductListItem key={product.id} product={product} className='product-list-item' />
+            ))}
+          </div>
       </div>
-    </>
+    </div>
   );
 };
 
