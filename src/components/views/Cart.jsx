@@ -12,6 +12,9 @@ const Cart = () => {
         const totalPrice = cartState.reduce((acc, item) => acc + item.price, 0);
         setTotal(totalPrice);
     },[cartState])
+    const orderBtnFunc = () => {
+        setCheckOut(!checkout)
+    }
     // return (
     //     <div className="cart-container">
     //         <h3>Your Cart</h3>
@@ -46,9 +49,17 @@ const Cart = () => {
     return(
         <div className="cart-view">
             <div className="cart-container">
+                {checkout && total !== 0 ? (
+                    <div className="confirm-msg">
+                        <h3>Thank you for purchusing!</h3>
+                        <div>
+                            <span onClick={() => { setCheckOut(!checkout); cartDispatch({ type: 'EMPTY_CART' })}}>Ok</span>
+                        </div>
+                    </div>
+                ):(null)}
                 {total != 0?(
                     <div className="cart-header">
-                    <h3>Shopping cart</h3>
+                    <p>Shopping cart</p>
                     <div className="cart-btn-container">
                         <button onClick={() => { setCheckOut(!checkout); cartDispatch({ type: 'EMPTY_CART' }); }}>Remove all</button>
                     </div>
@@ -106,7 +117,8 @@ const Cart = () => {
 
                             <label htmlFor=''>Postal code:</label>
                             <input type="text" name="" id="" />
-                            <div className="cart-order-btn">Order</div>
+
+                            <div className="cart-order-btn" onClick={() => orderBtnFunc()}>Order</div>
                         </form>
                     </div>
                 ):(
