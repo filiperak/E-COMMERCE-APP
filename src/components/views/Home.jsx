@@ -45,9 +45,17 @@ const Home = () => {
         </Link>
           <p>This week's special offer</p>
           <div className="rand-product-container">
-            {randproduct.map((product) => (
-              <ProductListItem key={product.id} product={product} className='product-list-item' />
-            ))}
+            <div className="inner-product-container">
+              {randproduct.map((product) => (
+                <Link to={`/products/${product.id}`}>
+                <div className="home-rand-product">
+                  <img src={product.image} alt={product.title} />
+                  <p>{product.title}</p>
+                  <p className="p-item-price">{`Price: $${product.price}`}</p>
+                </div>
+                </Link>
+              ))}
+            </div>
           </div>
       </div>
     </div>
