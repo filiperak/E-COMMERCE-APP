@@ -7,6 +7,8 @@ import Loading from "../laoding/Loading";
 import Error from "../error/Error";
 import { CartContext } from "../../contexts/CartContext";
 import './viewStyles/productSingleView.css'
+import StarRatings from "react-star-ratings";
+
 
 const ProductSingleView = () => {
     const { cartState,cartDispatch } = useContext(CartContext);
@@ -67,7 +69,15 @@ const ProductSingleView = () => {
                         </div>
                         <div className="info-container">
                             <h3>{product.title}</h3>
-                            <div className="product-ratitng">{`Rating:${product.rating.rate}/5 ⭐ based on ${product.rating.count} reviews`}</div> 
+                            <div className="product-ratitng">
+                            <StarRatings 
+                                rating={product.rating.rate}
+                                starRatedColor='orange'
+                                starDimension="20px"
+                                starSpacing="5px"
+                                />
+                                <h4>{`based on ${product.rating.count} reviews`}</h4>
+                                </div> 
                             <hr />
                             <p className="item-product-description">{product.description}</p>
                             <p>Price: ${product.price}</p>

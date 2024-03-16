@@ -6,6 +6,7 @@ import './viewStyles/homeStyle.css';
 import Error from "../error/Error";
 import Loading from "../laoding/Loading";
 import ProductListItem from "../products/ProductsListItem";
+import StarRatings from "react-star-ratings";
 
 const Home = () => {
   const [randproduct, setRandProduct] = useState([]);
@@ -43,12 +44,33 @@ const Home = () => {
           <Link to="/products">
             <button>All products</button>
           </Link>
-            <div className="first-home-product">
-              {randproduct.slice(0,1).map(elem => {
-                <p>{elem.title}</p>
-              })}
-
+            <div className="first-home-product-container">
+              {randproduct.slice(0,1).map(elem => ( 
+                <div className="first-home-product">
+                  <div className="first-home-title">
+                    <p>Today's Top Pick</p>
+                    <h1>New Product</h1>
+                    <p className="home-title-desc">{elem.description}</p>
+                    <div className="home-star-rating">
+                      <StarRatings 
+                      rating={elem.rating.rate}
+                      starRatedColor='orange'
+                      starDimension="20px"
+                      starSpacing="5px"
+                      />
+                    </div>
+                    <Link to={`/products/${elem.id}`} className="home-buy-now">
+                      Buy now
+                    </Link>
+                  </div>
+                  <div className="first-home-img">
+                    <img src={elem.image} alt={elem.title}/>
+                    <h4>{elem.title}</h4>
+                  </div>
+                </div>
+              ))}
             </div>
+
             <p>This week's special offer</p>
             <div className="rand-product-container">
                 {randproduct.map((product) => (
@@ -60,7 +82,6 @@ const Home = () => {
                       <p>
                       {/* <Link to={`/products/${product.id}`}>View</Link> */}
                       </p>
-                      
                   </div>
                   </Link>
                 ))}
