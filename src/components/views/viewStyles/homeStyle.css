@@ -41,7 +41,6 @@
 } 
 .first-home-product{
     display: flex;
-    height: 50vh;
 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
@@ -50,21 +49,26 @@
 .first-home-title{
     flex: 0 0 50%;
     padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.first-home-title h1{
+    color: rgb(156, 197, 59);
 }
 .first-home-img{
-    flex: 0 0 50%;
+    flex: 0 calc(50% - 5px);
     object-fit: contain;
-    padding: 5%;
+    padding: 10px;
 
-    height: 100%;
+    height: 150%;
     text-align: center;
     height: 100%;
-
+    width: 100%;
 }
 .first-home-img img{
     width: 70%;
-    max-height: 200px;
-    border: 1px solid;
+    max-height: 250px;
 }
 
 .home-buy-now{
@@ -76,9 +80,56 @@
     font-weight: 650;
     margin-top: auto;
     display: inline-block;
+    width: 33%;
+}
+.home-buy-now:hover{
+    background-color: rgb(19, 211, 48);
+    color: #fff;
 }
 .home-title-desc{
     font-size: 0.8rem;
     text-align: left;
     font-weight: 500;
+}
+.home-star-rating{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.top-pick{
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 6px;
+
+}
+.week-offer{
+    text-align: left;
+    padding: 0 3%;
+}
+@media only screen and (max-width: 768px) {
+ .home-page-container{
+    margin: 2vw;
+ }   
+}
+.home-all-products{
+    text-align: right;
+    display: block;
+}
+.home-all-products button{
+    margin: 5px 3% 5px 0;
+    border: 3px solid rgb(19, 211, 48);
+    color: rgb(19, 211, 48);
+    border-radius: 30px;
+    padding: 4px;
+    cursor: pointer;
+    font-weight: 850;
+    height: 40px;
+    font-size: 1rem;
+}
+.home-all-products button:hover{
+    color: #fff;
+    background-color:  rgb(19, 211, 48);;
 }

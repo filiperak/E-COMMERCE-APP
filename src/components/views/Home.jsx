@@ -41,14 +41,14 @@ const Home = () => {
   return (
       <div className="home-page-container">
         <div className="home-wrapper">
-          <Link to="/products">
-            <button>All products</button>
+          <Link to="/products" className="home-all-products">
+            <button >All products</button>
           </Link>
             <div className="first-home-product-container">
               {randproduct.slice(0,1).map(elem => ( 
                 <div className="first-home-product">
                   <div className="first-home-title">
-                    <p>Today's Top Pick</p>
+                    <p className="top-pick">Today's Top Pick</p>
                     <h1>New Product</h1>
                     <p className="home-title-desc">{elem.description}</p>
                     <div className="home-star-rating">
@@ -58,6 +58,8 @@ const Home = () => {
                       starDimension="20px"
                       starSpacing="5px"
                       />
+                     <p>{`based on ${elem.rating.count} reviews`}</p>
+
                     </div>
                     <Link to={`/products/${elem.id}`} className="home-buy-now">
                       Buy now
@@ -71,7 +73,7 @@ const Home = () => {
               ))}
             </div>
 
-            <p>This week's special offer</p>
+            <h4 className="week-offer">This week's special offer</h4>
             <div className="rand-product-container">
                 {randproduct.map((product) => (
                   <Link to={`/products/${product.id}`}>

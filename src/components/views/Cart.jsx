@@ -51,7 +51,7 @@ const Cart = () => {
             <div className="cart-container">
                 {checkout && total !== 0 ? (
                     <div className="confirm-msg">
-                        <h3>Thank you for purchusing!</h3>
+                        <h3>Thank you for purchasing!</h3>
                         <div>
                             <span onClick={() => { setCheckOut(!checkout); cartDispatch({ type: 'EMPTY_CART' })}}>Ok</span>
                         </div>

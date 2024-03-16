@@ -204,10 +204,12 @@
 }
 .confirm-msg div span{
     background-color: rgb(168, 160, 160);
-    color: orange;
+    color: rgb(0, 0, 0);
     border-radius: 6px;
     padding: 4px;
     cursor: pointer;
     font-weight: 650;
     min-width: 50px;
+    width: 50%;
+    display: inline-block;
 }
