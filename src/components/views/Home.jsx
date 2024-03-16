@@ -17,7 +17,7 @@ const Home = () => {
       .get('/products')
       .then((res) => {
         const shuffledProducts = res.data.sort(() => Math.random() - 0.5);
-        const selectedProducts = shuffledProducts.slice(0, 6);
+        const selectedProducts = shuffledProducts.slice(0, 8);
         setRandProduct(selectedProducts)
         setLoading(false);
         console.log(res.data);
@@ -38,28 +38,36 @@ const Home = () => {
   }
 
   return (
-    <div className="home-page-container">
-      <div className="home-wrapper">
-        <Link to="/products">
-          <button>All products</button>
-        </Link>
-          <p>This week's special offer</p>
-          <div className="rand-product-container">
-            <div className="inner-product-container">
-              {randproduct.map((product) => (
-                <Link to={`/products/${product.id}`}>
-                <div className="home-rand-product">
-                  <img src={product.image} alt={product.title} />
-                  <p>{product.title}</p>
-                  <p className="p-item-price">{`Price: $${product.price}`}</p>
-                </div>
-                </Link>
-              ))}
+      <div className="home-page-container">
+        <div className="home-wrapper">
+          <Link to="/products">
+            <button>All products</button>
+          </Link>
+            <div className="first-home-product">
+              {randproduct.slice(0,1).map(elem => {
+                <p>{elem.title}</p>
+              })}
+
             </div>
-          </div>
+            <p>This week's special offer</p>
+            <div className="rand-product-container">
+                {randproduct.map((product) => (
+                  <Link to={`/products/${product.id}`}>
+                  <div className="home-rand-product">
+                      <img src={product.image} alt={product.title} />
+                      <p>{product.title.slice(0,10)}</p>
+                      <p className="p-item-price">{`Price: $${product.price}`}</p>
+                      <p>
+                      {/* <Link to={`/products/${product.id}`}>View</Link> */}
+                      </p>
+                      
+                  </div>
+                  </Link>
+                ))}
+            </div>
+        </div>
       </div>
-    </div>
-  );
+    );
 };
 
 export default Home;
