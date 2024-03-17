@@ -10,8 +10,8 @@ This is a React-based e-commerce application built with state management using `
 - **Responsive Design:** Ensures compatibility and user experience across various devices.
 
 ## Live Demo
-Check out the live demo hosted on Netlify:[ecommerce app](https://filip-ecommerce-app.netlify.app/)
-
+Check out the live demo hosted on Netlify: [ecommerce app](https://filip-ecommerce-app.netlify.app/)
+link: https://filip-ecommerce-app.netlify.app/
 ## Installation
 
 1. Clone the repository:
