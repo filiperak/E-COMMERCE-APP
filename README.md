@@ -14,7 +14,7 @@ This is a React-based e-commerce application built with state management using `
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/your-project.git
+    git clone https://github.com/filiperak/E-COMMERCE-APP.git
     ```
 
 2. Navigate into the project directory:
@@ -35,3 +35,16 @@ To run the application locally:
 
 ```bash
 npm start
+This will start the development server. Open http://localhost:3000 to view it in your browser.
+
+This will start the development server. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Live Demo
+
+Check out the live demo hosted on Netlify: [React E-Commerce App](https://filip-ecommerce-app.netlify.app/)
+
+Feel free to explore the app and its functionalities!
+
+## Credits
+
+This project is maintained by [Filip Erak]. If you encounter any issues or have suggestions for improvements, please feel free to open an issue.
