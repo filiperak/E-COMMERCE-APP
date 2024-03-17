@@ -33,6 +33,7 @@ const ContactUs = () => {
                     ></textarea>
                     <p>
                         <input type="submit" value="Send" id='contact-send-btn'/>
+                        testtest123
                     </p>
                 </form>
             </div>
