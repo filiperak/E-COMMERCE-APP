@@ -41,7 +41,7 @@ const Home = () => {
       <div className="home-page-container">
         <div className="home-wrapper">
           <Link to="/products" className="home-all-products">
-            <button >All products</button>
+            <button >All products123</button>
           </Link>
             <div className="first-home-product-container">
               {randproduct.slice(0,1).map(elem => ( 
