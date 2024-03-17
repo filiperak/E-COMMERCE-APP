@@ -57,7 +57,7 @@ const Cart = () => {
                         </div>
                     </div>
                 ):(null)}
-                {total != 0?(
+                {total !== 0?(
                     <div className="cart-header">
                     <p>Shopping cart</p>
                     <div className="cart-btn-container">
@@ -74,7 +74,7 @@ const Cart = () => {
                         </div>
                     </div>
                 )}
-                {total !=0?(
+                {total !==0?(
                     <div className="cart-products">
                         <div className="cart-product-list">
                         {cartState.map((item,ind) => (

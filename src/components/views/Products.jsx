@@ -32,7 +32,7 @@ const Products = () => {
                     payload: error.response
                 });
             });
-    }, []);
+    }, [productDispatch]);
 
     const handleCategoryChange = (selectedCategory) => {
         setSelectedCategory(selectedCategory);

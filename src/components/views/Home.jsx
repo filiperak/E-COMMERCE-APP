@@ -5,7 +5,6 @@ import instance from "../../services/api";
 import './viewStyles/homeStyle.css';
 import Error from "../error/Error";
 import Loading from "../laoding/Loading";
-import ProductListItem from "../products/ProductsListItem";
 import StarRatings from "react-star-ratings";
 
 const Home = () => {
