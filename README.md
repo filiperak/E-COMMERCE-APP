@@ -12,25 +12,6 @@ This is a React-based e-commerce application built with state management using `
 ## Live Demo
 Check out the live demo hosted on Netlify: [ecommerce app](https://filip-ecommerce-app.netlify.app/)
 link: https://filip-ecommerce-app.netlify.app/
-## Installation
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/filiperak/E-COMMERCE-APP.git
-    ```
-
-2. Navigate into the project directory:
-
-    ```bash
-    cd your-project
-    ```
-
-3. Install dependencies:
-
-    ```bash
-    npm install
-    ```
 
 
 
