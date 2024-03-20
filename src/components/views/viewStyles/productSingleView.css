@@ -14,11 +14,9 @@
 
 .product-img-container {
     flex: 0 0 30%;
-    /* border: 1px solid green; */
 }
 .info-container{
     flex: 0 0 70%;
-    /* border: 1px solid green; */
 
 }
 
@@ -68,7 +66,6 @@
     padding: 4px;
     cursor: pointer;
     font-weight: 650;
-    /* margin-top: 15px; */
 }
 .product-back-btn:hover{
     background-color: rgb(211, 218, 224);

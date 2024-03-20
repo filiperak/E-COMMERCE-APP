@@ -80,9 +80,6 @@ const Home = () => {
                       <img src={product.image} alt={product.title} />
                       <p>{product.title.slice(0,10)}</p>
                       <p className="p-item-price">{`Price: $${product.price}`}</p>
-                      <p>
-                      {/* <Link to={`/products/${product.id}`}>View</Link> */}
-                      </p>
                   </div>
                   </Link>
                 ))}

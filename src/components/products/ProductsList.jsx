@@ -1,6 +1,4 @@
-
 import ProductListItem from "./ProductsListItem";
-import './productList.css';
 
 const ProductsList = ({ products, selectedCategory, selectedSort }) => {
     const filteredProducts = (selectedCategory === 'all' || selectedCategory === undefined) ? products : products.filter(p => p.category === selectedCategory);

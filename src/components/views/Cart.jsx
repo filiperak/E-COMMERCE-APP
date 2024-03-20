@@ -15,37 +15,7 @@ const Cart = () => {
     const orderBtnFunc = () => {
         setCheckOut(!checkout)
     }
-    // return (
-    //     <div className="cart-container">
-    //         <h3>Your Cart</h3>
-    //         <div className="cart-table">
-    //         {cartState.map((item,ind) => (
-    //             <div key={item.id} className="cart-item">
-    //                 <img src={item.image} alt={item.title} />
-    //                 <p className="item-title">{item.title}</p>
-    //                 <p className="item-price">${item.price}</p>
-    //                 <div 
-    //                 onClick={() => cartDispatch({type:'REMOVE_FROM_CART',id:item.id})}
-    //                 className="delete-btn">Delete</div>
-    //             </div>
-    //         ))}
-    //         </div>
-    //         <p>{`Total Price: $ ${total.toFixed(2)}`}</p>
-    //         <button onClick={() => cartDispatch({type:'EMPTY_CART'})}>Empty Cart</button>
-    //         <button onClick={() => { setCheckOut(!checkout) }}>Checkout</button>
-    //         {(checkout == true && total != 0)? (
-    //         <div className="confirmation-msg">
-    //             <p>Purchase completed.</p>
-    //             <p>{`Total Price: $ ${total.toFixed(2)}`}</p>
-    //             <button onClick={() => { setCheckOut(!checkout); cartDispatch({ type: 'EMPTY_CART' }); }}>ok</button>
-    //         </div>
-    //             ):(null)}
-            
-    //         <Link to={`/products`}>
-    //             <span>Continue Shopping</span>
-    //         </Link>
-    //     </div>    
-    // );
+
     return(
         <div className="cart-view">
             <div className="cart-container">
